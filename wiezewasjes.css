@@ -1,0 +1,846 @@
+/*---------------------------------------------
+OVERALL STYLING
+---------------------------------------------*/
+
+/* ---------------------------------------------
+FONT
+-----------------------------------------------*/
+
+/* KOPJES*/
+@import url(//fonts.googleapis.com/css?family=Roboto+Slab&display=swap);
+
+/* TEKST*/
+@font-face {
+font-family: 'Avenir';
+src: url("Avenir.ttc") format("truetype");
+}
+
+/* ---------------------------------------------
+BODY
+-----------------------------------------------*/
+body{
+margin: 0;
+color: black;
+min-width: 
+}
+
+body.index {
+background-color: #ced0d2;
+}
+
+/* ---------------------------------------------
+KOPJES
+-----------------------------------------------*/
+h1,
+h2 {
+margin-top: 2em;
+font-family: 'Roboto Slab', serif;
+text-transform: uppercase;
+text-align: center;
+color: black;
+text-decoration: none;
+font-weight: normal
+}
+
+h3 {
+font-family: "Avenir", sans-serif;
+text-align: center;
+color: black;
+text-decoration: none;
+}
+
+h4 {
+font-family: "Playfair Display", serif;
+text-align: center;
+color: black;
+text-decoration: none;
+}
+
+body {
+font-family: "Avenir", sans-serif;
+}
+
+a {
+text-decoration: none;
+}
+
+img {
+border: none;
+}
+
+/* ---------------------------------------------
+HEADER
+-----------------------------------------------*/
+body > header {
+background: #071520;
+}
+
+body > header{
+    
+}
+
+/*verborgen h1*/
+body > header h1 {
+visibility: hidden;
+position: absolute;
+left: -666em;
+}
+
+/* LOGO */
+body > header > a > img {
+display: block;
+width: 20em;
+
+margin-left: auto;
+margin-right: auto;
+padding-top: 2em;
+}
+
+/* WINKELWAGENTJE - Stijling */
+
+header > button{
+    
+width: 4em;
+
+position: absolute;
+left: 90%;
+top: 5%;
+
+border: none;
+background-color: transparent;
+}
+
+/* -- WINKELWAGENTJE - Vol/leeg js -- */
+
+/* Leeg img */
+body.detail > header > button > img:first-of-type{
+    opacity: 100;
+    
+    position: absolute;
+    width: 3em;
+    
+}
+
+/* Leeg img */
+body.detail > header.add > button > img:first-of-type{
+    opacity: 100; 
+    
+    
+}
+
+/* Vol img*/
+body.detail > header > button > img:nth-of-type(2){
+opacity: 0;
+width: 3em;
+        transition: 0.5s cubic-bezier(0.4, 0, 1, 1);
+}
+
+/* Vol img */
+body.detail > header.add > button > img:nth-of-type(2){
+    opacity: 100; 
+}
+
+/* NAVIGATIEBAR */
+body > header > nav {
+width: 75%;
+margin-left: auto;
+margin-right: auto;
+}
+
+body > header > nav ul {
+list-style: none;
+border: transparent;
+padding-bottom: 2em;
+
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+overflow: scroll;
+}
+
+body > header > nav ul a {
+font-family: "Avenir", sans-serif;
+color: white;
+text-decoration: none;
+text-transform: uppercase;
+
+background-color: transparent;
+margin: 1em;
+white-space: nowrap;
+border: transparent;
+white-space: nowrap;
+}
+
+/* EINDE HEADER */
+
+/*---------------------------------------------
+FAVORIETEN ALGEMEEN
+---------------------------------------------*/
+body.index > section > a > article {
+background-color: white;
+color: black;
+text-align: center;
+box-shadow: .4em .4em 2em .4em grey;
+}
+
+body.index article img {
+max-width: 100%;
+}
+
+/*---------------------------------------------
+SIERADEN ALGEMEEN
+---------------------------------------------*/
+main.index {
+background-color: #ced0d2;
+}
+
+/* KOPJES SIERADEN */
+body.index > main > a > article > button {
+position: absolute;
+}
+
+body.index > main > h2 {
+margin-top: 2em;
+text-align: center;
+margin: 0;
+}
+
+
+/*---------------------------------------------
+FOOTER ALGEMEEN
+---------------------------------------------*/
+
+footer {
+background-color: #071520;
+width: auto;
+padding: 0 12.5%;
+}
+
+footer > section {
+font-size: 75%;
+}
+
+footer > section:nth-of-type(1), section:nth-of-type(2){
+margin-top: 6em;
+}
+
+footer > section:last-of-type{
+margin-bottom: 6em;
+}
+
+footer > section > ul {
+list-style: none;
+padding: 0;
+}
+
+footer > section > h3 {
+padding: .5em;
+color: black;
+background-color: white;
+text-align: left;
+margin: 0
+}
+
+footer > section > ul > li > a {
+margin-top: 1em;
+color: white;
+}
+
+footer > section:last-of-type > ul {
+display: inline-flex;
+flex-direction: row;
+align-items: flex-start;   
+}
+
+
+/*---------------------------------------------
+DETAILPAGINA
+---------------------------------------------*/
+
+body.detail{
+    background-color: #071520;
+}
+
+body.detail > main > section:last-of-type > h2{
+    color: white;
+}
+
+/* NAVIGATIE PAD */
+body.detail > main > p:first-of-type {
+margin: 2em;
+word-spacing: .5em;
+    color: white;
+}
+
+body.detail > main img{
+    
+}
+
+/* HELE FIELDSET */
+body.detail > main > section > form > fieldset {
+padding: 2em;
+border: none;
+background-color: #fefaf5;
+}
+
+body.detail > main > section > form > fieldset h2 {
+}
+
+body.detail > main > section > form > fieldset label{
+text-align: right;
+margin-right: 1em;
+}
+
+/* AANTAL KIEZEN SELECTOR */
+body.detail > main select{
+display: inline;
+    
+    border: solid 0;
+width: 3em;
+height: 2em;
+box-shadow: lightgrey 2px 2px;
+}
+
+/* VOEG TOE AAN WINKELWAGENTJE BUTTON */
+body.detail > main button{
+width: 100%;
+background-color: orange;
+text-transform: uppercase;
+font-weight: bold;
+padding: 1em;
+margin-top: 1.5em;
+    border: none;
+}
+
+/* PRODUCT BESCHRIJVING BLOK */
+body.detail > main > section > article {
+    padding: 1em;
+    background-color: #fefaf5;
+}
+
+/* TEKST */
+body.detail > main > section > article > p {
+margin-bottom: 1em;
+}
+
+/* DISCLAIMER TEKST CADEAUBON */
+body.detail > main > section > article > p:last-of-type {
+font-size: 75%;
+}
+
+
+
+
+
+
+
+/*---------------------------------------------
+IPHONE MEDIA QUERY
+---------------------------------------------*/
+@media only screen and (min-width: 20em) {
+
+/* INDEX - IPHONE - FAVORIETEN */
+body.index > section {
+width: 75%;
+margin: 0 auto;
+}
+
+body.index > section > a > article {
+padding: 1em;
+margin: 1em 0em
+}
+
+/* INDEX - IPHONE - FAVORIETEN AFBEELDINGEN WEG*/
+body.index > section > a > article > img {
+display: none;
+}
+
+/*INDEX - IPHONE - FAVORIETEN KOPJES*/
+body.index > section > a > article > h3,
+p {
+margin: 0em;
+}
+
+/* INDEX - IPHONE - SIERADEN */
+body.index main {
+display: grid;
+grid-column: 1 / 3;
+grid-template-columns: 1fr 1fr;
+grid-gap: 1em;
+width: 75%;
+margin: 0 auto;
+}
+
+body.index main > h2 {
+margin-top: 2em;
+grid-column: span 2;
+}
+
+body.index main > a > article {
+position: relative;
+margin-bottom: 2em;
+}
+
+body.index main > a > article > button {
+
+position: absolute;
+
+background: white;
+border: none;
+padding: .5em;
+
+font-size: 1em;
+text-transform: uppercase;
+font-weight: bold;
+
+right: 0;
+left: 0;
+bottom: -10%;
+
+width: 100%
+}
+
+
+/* INDEX - IPHONE - NIEUWSBRIEF */
+body.index form {
+margin-top: 5em;
+max-width: auto;
+padding: 0 12.5% 1em;
+background-color: white;
+}
+
+body.index form > fieldset {
+border: none;
+}
+
+body.index form > fieldset legend {
+width: 100%;
+}
+
+body.index form > fieldset > p {
+margin-bottom: 2em;
+}
+
+body.index form > fieldset > section {
+display: flex;
+justify-content: space-between;
+}
+
+body.index form > fieldset > section > label {
+hyphens: none;
+}
+
+body.index form > fieldset > section > input {
+font-family: 'Avenir', sans-serif;
+margin-left: 2em;
+height: 2em;
+
+border-top: none;
+border-left: none;
+border-right: none;
+border-bottom: solid black;
+
+flex-grow: 1;
+}
+
+body.index form > fieldset > button {
+margin-top: 2em;
+width: 100%;
+height: 4em;
+
+font-family: 'Avenir', sans-serif;
+text-transform: uppercase;
+
+background-color: orange;
+border: none;
+}
+
+
+/* INDEX & DETAIL - IPHONE - FOOTER */
+footer {
+display: grid;
+grid-column: 1/3;
+grid-template-columns: 1fr 1fr;
+grid-gap: .5em;
+}
+
+footer > section {
+display: flex;
+flex-direction: column;
+padding: .5em;
+font-size: 75%;
+}
+
+footer > section > h3 {
+padding: .5em 1em;
+}
+
+footer > section img {
+max-width: 3em;
+}
+
+footer > section:last-of-type {
+grid-column: span 2;
+}
+
+footer > section:last-of-type a {
+
+grid-column: span 2;
+
+margin: .2em;
+display: flex;
+flex-direction: row;
+}
+
+/*---------------------------------------------
+DETAILPAGINA - IPHONE
+---------------------------------------------*/
+body.detail > main > section {
+margin: 0 2em;
+}
+
+body.detail > main > section > img {
+width: 100%;
+}
+
+body.detail > main > section > form > fieldset{
+text-align: center;
+margin-bottom: 3em;
+}
+    
+    body.detail > main > section > form h2{
+        padding-top: 2em;
+    }
+
+
+/* DETAIL - IPHONE - MISSCHIEN VINDT JE DIT OOK LEUK */
+body.detail > section {
+margin: 2em
+}
+
+/* DETAIL - IPHONE - KOPJE MISSCHIEN VINDT JE DIT OOK LEUK */
+body.detail > section > h2 {
+margin-top: 5em;
+
+}
+
+body.detail > section > ul {
+list-style: none;
+border: transparent;
+padding-bottom: 2em;
+
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+overflow: scroll;
+}
+
+body.detail > section > ul > li{
+padding: 0 .5em;
+}
+
+/* DETAIL - IPHONE - KAARTJES MISSCHIEN VINDT JE DIT OOK LEUK*/
+body.detail > section > ul > li > a > article {
+background-color: white;
+color: black;
+text-align: center;
+padding: 1em;
+margin: 1em 0em;
+min-height: 13em;
+}
+
+/*DETAIL - IPHONE - AFBEELDINGEN MISSCHIEN V.*/
+body.detail > section > ul > li > a > article > img {
+max-width: 20em;
+}
+
+} /* EINDE IPHONE MEDIA QUERY */
+
+
+
+/*---------------------------------------------
+IPAD MEDIA QUERY
+---------------------------------------------*/
+@media only screen and (min-width: 37.5em) {
+
+/* INDEX - IPAD - FAVORIETEN*/
+body.index > section {
+display: grid;
+grid-column: 1/3;
+grid-template-columns: 1fr 1fr;
+grid-gap: 1em;
+
+max-width: 75%;
+margin: auto;
+}
+
+body.index section h2 {
+grid-column: span 2;
+}
+
+body.index > section > a > article {
+margin: 0;
+}
+
+body.index > section > a > article > img {
+display: block;
+}
+
+body.index > section > a > article > h3 p {
+margin: 1em .5em .5em .5em;
+}
+
+body.index > section > a > article > h3{
+margin-top: 1em;
+}
+
+/* INDEX - IPAD - SIERADEN */
+body.index main {
+display: grid;
+grid-column: 1 / 3;
+grid-template-columns: 1fr 1fr;
+grid-gap: 1em;
+
+width: 75%;
+margin: 0 auto;
+}
+
+body.index main > h2 {
+grid-column: span 2;
+}
+
+body.index main > a > article {
+position: relative;
+margin: 0;
+}
+
+body.index main > a > article > button {
+
+position: absolute;
+
+background: white;
+border: none;
+padding: .5em;
+
+font-size: 1em;
+text-transform: uppercase;
+font-weight: bold;
+
+margin: auto;
+right: 25%;
+left: 25%;
+bottom: 10%;
+
+width: auto;
+}
+
+/* INDEX & DETAIL - IPAD - FOOTER*/
+footer {
+display: grid;
+grid-column: 1 / 4;
+grid-column: 
+}
+
+/*---------------------------------------------
+DETAILPAGINA - IPAD
+---------------------------------------------*/
+body.detail {
+width: 100%;
+}
+
+/* DETAIL - IPAD - PRODUCT ETC */
+body.detail > main > section {
+display: grid;
+grid-column: 4;
+grid-template-columns: 1fr 1fr 1fr;
+grid-row: 2;
+grid-template-rows: 3;
+grid-gap: 1em;
+}
+
+/* DETAIL - IPAD - PRODUCTFOTO */
+body.detail > main > section > img {
+grid-column-start: 1;
+grid-column-end: 2;
+grid-row: span 2;
+}
+
+/* DETAIL - IPAD - PRODUCTFORMULIER*/
+body.detail > main > section > form {
+grid-column-start: 2;
+grid-column-end: 4;
+grid-row-start: 2;
+grid-row-end: 3;
+grid-row: span 2;
+    
+    position: relative;
+transform: translateY(-21%);
+}
+    body.detail > main > section > form h2 {
+        padding-top: 2em;}
+    
+
+/* DETAIL - IPAD - PRODUCTBESCHRIJVING*/
+body.detail > main > section > article {
+grid-column: span 3;
+}
+
+/* DETAIL - IPAD - MISSCHIEN VIND JE DIT OOK LEUK */
+body.detail > section > ul {
+
+overflow: 0;
+display: grid;
+grid-column: 3;
+grid-template-columns: 1fr 1fr 1fr;
+grid-gap: 1em;
+margin: 5em;
+    
+}
+
+/* DETAIL - IPAD - KOPJE MISSCHIEN VIND JE DIT OOK LEUK */
+body.detail > section > h2 {
+grid-column: span 3;
+margin-top: 5em;
+    color: white;
+}
+
+/* DETAIL - IPAD - KAARTJES MISSCHIEN VIND JE DIT OOK LEUK*/
+body.detail > section > lu > li > a > article {
+background-color: white;
+color: black;
+text-align: center;
+padding: 1em;
+margin: 1em 0em;
+min-height: 13em;
+}
+
+/*DETAIL - IPAD - AFBEELDINGEN MISSCHIEN V.*/
+body.detail > section > lu > li > a > article > img {
+max-width: 100%;
+}
+
+} /* EINDE IPAD MEDIA QUERY */
+
+
+/*---------------------------------------------
+LAPTOP MEDIA QUERY
+---------------------------------------------*/
+@media only screen and (min-width: 68.75em) {
+
+/* LAPTOP NAV */
+nav{
+max-width: 60em;
+}
+
+
+/* INDEX - LAPTOP - FAVORIETEN */
+body.index section h2 {
+grid-column: span 4;
+}
+
+body.index > section {
+display: grid;
+grid-column: 1/5;
+grid-template-columns: 1fr 1fr 1fr 1fr;
+grid-gap: 1em;
+
+max-width: 75%;
+margin: auto;
+}
+
+body.index > section > a > article {
+border: solid white 1em;
+}
+
+body.index > section > a > article > h3,
+p {
+margin: 1em .5em .5em .5em;
+}
+
+/* INDEX - LAPTOP - SIERADEN */
+body.index main > h2 {
+grid-column: span 4;
+}
+
+body.index main {
+display: grid;
+grid-column: 1 / 5;
+grid-template-columns: 1fr 1fr 1fr 1fr;
+grid-gap: 1em;
+width: 75%;
+margin: 0 auto;
+}
+
+body.index main > a > article {
+position: relative;
+}
+
+body.index main > a > article > button {
+
+position: absolute;
+
+background: white;
+border: none;
+padding: .5em;
+
+font-size: 1em;
+text-transform: uppercase;
+font-weight: bold;
+
+margin: auto;
+right: 25%;
+left: 25%;
+bottom: 10%;
+}
+
+/* INDEX & DETAIL - LAPTOP - FOOTER */
+footer {
+font-size: 60%;
+
+display: grid;
+grid-column: 1/4;
+grid-template-columns: 1fr 1fr 1fr;
+grid-gap: .5em;
+
+min-width: 100%;
+}
+
+footer > section {
+display: flex;
+flex-direction: column;
+padding: .5em;
+
+}
+
+footer > section > h3 {
+text-align: left;
+}
+
+footer > section > ul > li > a > img {
+max-width: 3em;
+    flex-direction: row;
+    position: absolute;
+}
+    
+
+    footer > section > ul > li > a > img:first-of-type {
+    position: absolute;    
+    }
+
+    footer > section > ul > li > a > img:last-of-type {
+    position: relative;    
+        right:10%;
+        
+    }
+
+
+footer > section:last-of-type a {
+
+margin: .2em;
+display: flex;
+flex-direction: row;
+}
+
+}
+
+/* EINDE LAPTOP MEDIA QUERY */
